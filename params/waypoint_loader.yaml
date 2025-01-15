@@ -1,0 +1,13 @@
+/uav1/waypoint_loader:
+  ros__parameters:
+    rate:
+      state_machine: 0.5 # [Hz]
+      have_goal: 0.5 # [Hz]
+    trajectory:
+      loop: true
+      waypoints: [
+        0.0,  0.0, 2.0, 0.0, 
+        1.0, 0.0, 2.0, 0.0, 
+        1.0, 1.0, 2.0, 0.0, 
+        0.0, 1.0, 2.0, 0.0, 
+      ] # [m, m, m, rad]

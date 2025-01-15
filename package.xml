@@ -1,0 +1,32 @@
+<?xml version="1.0"?>                                                                                          <!-- Declaração do XML -->
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?> <!-- Esquema XML para validação -->
+<package format="3">                                                                                           <!-- Define a versão do formato do pacote ROS -->
+  <name>uav_waypoint</name>                                                                                      <!-- Nome do pacote -->
+  <version>0.1.0</version>                                                                                       <!-- Versão do pacote -->
+  <description>This package contains the waypoint loader node for UAV waypoint management.</description>         <!-- Descrição do pacote -->
+  <maintainer email="wagnergarcia@eng.ci.ufpb.br">Wagner Garcia</maintainer>                                     <!-- Informações do mantenedor do pacote -->
+  <license>MIT</license>                                                                                         <!-- Licença do pacote -->
+
+  <!-- Define as dependências necessárias para o pacote durante a construção -->
+  <buildtool_depend>ament_cmake</buildtool_depend>                                                              <!-- Dependência do build system, 'ament_cmake' é necessário para compilar pacotes ROS2 -->
+  
+  <!-- Dependências do pacote durante a execução -->
+  <depend>rclcpp</depend>                                                                                         <!-- Biblioteca principal para criar nós ROS2 -->
+  <depend>rclcpp_lifecycle</depend>                                                                                <!-- Biblioteca para gerenciamento do ciclo de vida dos nós -->
+  <depend>rclcpp_components</depend>                                                                               <!-- Biblioteca para trabalhar com componentes de nós ROS2 -->
+  <depend>geometry_msgs</depend>                                                                                  <!-- Mensagens de geometria (pontos, vetores, etc.) -->
+  <depend>nav_msgs</depend>                                                                                       <!-- Mensagens para navegação no ROS2 -->
+  <depend>std_srvs</depend>                                                                                       <!-- Pacote para serviços padrão do ROS2 -->
+  <depend>tf2</depend>                                                                                            <!-- Biblioteca para transformações de coordenadas no ROS2 -->
+  <depend>tf2_ros</depend>                                                                                         <!-- Pacote para transformar entre diferentes coordenadas com ROS2 -->
+  <depend>tf2_geometry_msgs</depend>                                                                              <!-- Converte entre transformações e mensagens de geometria -->
+  
+  <!-- Dependências para testes -->
+  <test_depend>ament_lint_auto</test_depend>                                                                     <!-- Dependência para automação de linting de código -->
+  <test_depend>ament_lint_common</test_depend>                                                                   <!-- Dependência para ferramentas comuns de linting de código -->
+
+  <!-- Define o tipo de construção do pacote -->
+  <export>                                                                                                       <!-- Seção de exportação do pacote -->
+    <build_type>ament_cmake</build_type>                                                                         <!-- Especifica que a construção do pacote usa 'ament_cmake' -->
+  </export>
+</package>
